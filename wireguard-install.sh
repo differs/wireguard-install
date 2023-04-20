@@ -31,7 +31,7 @@ if grep -qs "ubuntu" /etc/os-release; then
 	group_name="nogroup"
 elif [[ -e /etc/debian_version ]]; then
 	os="debian"
-	os_version=$(grep -oE '[0-9]+' /etc/debian_version | head -1)
+	os_version=$(grep -oE '[0-12]+' /etc/debian_version | head -1)
 	group_name="nogroup"
 elif [[ -e /etc/centos-release ]]; then
 	os="centos"
